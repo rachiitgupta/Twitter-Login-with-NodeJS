@@ -37,3 +37,12 @@ http://127.0.0.1:3000/
 
 
 
+You can check the input in your atlas cluster or write a new app.get() method to display the data from the database
+
+```sh
+app.get('/data', function(req,res)=>{
+  ##code to print the data
+});
+
+```
+
