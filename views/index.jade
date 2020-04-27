@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .container
+    .row
+       .col-sm-12
+          table.table.table-hover
+            thead
+              tr
+                th 
+                  h1 #{title}
+            tbody
+              tr
+                td
+                   if user
+                    strong Welcome: 
+                    | #{user.displayName}
+                    br
+                    a(class ="btn btn-primary" href="/twitter/logout" style="float:right") 
+                      | Logout
+                    br 
+                    strong Display Photo: 
+                    img(src="#{user.photos[0].value}", alt="")
+                    
+                    form(action="/twitter/addpost" method="POST")
+                      br
+                      label Title:
+                      div
+                        input(type="text" name="body")
+                      br
+                      label Message:
+                      div
+                        textarea(rows="5" cols="30")
+                      div
+                        Button(class ="btn btn-success") 
+                          |Submit
+
+                    
+                   else
+                    a(class ="btn btn-primary" href="/twitter/login") 
+                      | Share your experience
+                    h3 Shared Stories...
+                    div 
+                      h1 #{data}
