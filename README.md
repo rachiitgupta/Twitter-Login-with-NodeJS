@@ -1,2 +1,39 @@
 # Twitter-Login-with-NodeJS
 Connect your NodeJS app with twitter login using passport, express 
+
+This app is client side application for posting small person blogs. I am currently working on this repo.
+
+# Packages Used
+- express
+- path
+- morgan
+- bodyParser 
+- MongoClient
+- Passport
+
+#### Twitter Consumer key, Secret credentails are obtained from twitter's developers account. 
+
+## Follow these steps:
+- In the twi.js file, Connection_URL string is obtained from your MONGO DB Atlas account. Go to your account->clusters->connect->In an application-> copy the string.
+- You need to add your password in the CONNECTION_URL string, which is your ATLAS PASSWORD.
+- I have used a constant variable DATABASE_NAME because I had just one database. You are allowed to use it as you go.
+- TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET are used to authenticate your app with twitter server
+
+
+### To run the app
+```sh
+Windows:
+
+D:\path_to_directory> npm start
+
+```
+
+#### Open the browser and input the following url:
+
+```sh
+http://127.0.0.1:3000/
+
+```
+
+
+
